@@ -50,3 +50,24 @@ This is a C programming project, included as supporting evidence of programming 
 ## Author
 
 **Kirubanandhan V** · [GitHub](https://github.com/kirubanandhan016)
+
+
+## Program flow
+
+```mermaid
+flowchart TD
+    User[Console user] --> Menu[Menu selection]
+    Menu --> Validate[Input validation]
+    Validate --> Ops[Contact operations]
+    Ops --> Store[File persistence]
+    Store --> Menu
+```
+
+## Build with compiler warnings
+
+```bash
+gcc -std=c11 -Wall -Wextra -Wpedantic main.c contact.c file.c validation.c -o addressbook
+```
+
+Run from the repository directory so relative data-file paths resolve consistently. The repository currently includes generated executable artifacts and a sample contact-data file; use non-sensitive test records when demonstrating the application.
+
