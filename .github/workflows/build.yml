@@ -1,0 +1,15 @@
+name: Address Book C Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile address book
+        run: gcc -std=c11 -Wall -Wextra -Wpedantic main.c contact.c file.c validation.c -o addressbook
